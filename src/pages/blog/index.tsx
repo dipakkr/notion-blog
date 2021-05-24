@@ -63,7 +63,7 @@ const Index = ({ posts = [], preview }) => {
         </div>
       )}
       <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
-        <h1>My Notion Blog</h1>
+        <h1> ✍️ All Posts </h1>
         {posts.length === 0 && (
           <p className={blogStyles.noPosts}>There are no posts yet</p>
         )}
@@ -80,19 +80,22 @@ const Index = ({ posts = [], preview }) => {
                   </Link>
                 </span>
               </h3>
-              {post.Authors.length > 0 && (
+
+              {/* {post.Authors.length > 0 && (
                 <div className="authors">By: {post.Authors.join(' ')}</div>
-              )}
+              )} */}
+
               {post.Date && (
-                <div className="posted">Posted: {getDateStr(post.Date)}</div>
+                <div className="posted">{getDateStr(post.Date)}</div>
               )}
-              <p>
+
+              {/* <p>
                 {(!post.preview || post.preview.length === 0) &&
                   'No preview available'}
                 {(post.preview || []).map((block, idx) =>
                   textBlock(block, true, `${post.Slug}${idx}`)
                 )}
-              </p>
+              </p> */}
             </div>
           )
         })}
