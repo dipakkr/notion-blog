@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Header from '../../components/header'
 
 import blogStyles from '../../styles/blog.module.css'
 import sharedStyles from '../../styles/shared.module.css'
@@ -12,6 +11,7 @@ import {
 import { textBlock } from '../../lib/notion/renderers'
 import getNotionUsers from '../../lib/notion/getNotionUsers'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
+import Head from 'next/head'
 
 export async function getStaticProps({ preview }) {
   const postsTable = await getBlogIndex()
@@ -50,55 +50,67 @@ export async function getStaticProps({ preview }) {
 const Index = ({ posts = [], preview }) => {
   return (
     <>
-      <Header titlePre="Blog" />
-      {preview && (
-        <div className={blogStyles.previewAlertContainer}>
-          <div className={blogStyles.previewAlert}>
-            <b>Note:</b>
-            {` `}Viewing in preview mode{' '}
-            <Link href={`/api/clear-preview`}>
-              <button className={blogStyles.escapePreview}>Exit Preview</button>
-            </Link>
-          </div>
-        </div>
-      )}
-      <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
-        <h1> ✍️ All Posts </h1>
-        {posts.length === 0 && (
-          <p className={blogStyles.noPosts}>There are no posts yet</p>
-        )}
-        {posts.map((post) => {
-          return (
-            <div className={blogStyles.postPreview} key={post.Slug}>
-              <h3>
-                <span className={blogStyles.titleContainer}>
-                  {!post.Published && (
-                    <span className={blogStyles.draftBadge}>Draft</span>
-                  )}
-                  <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
-                    <a>{post.Page}</a>
-                  </Link>
-                </span>
-              </h3>
+      <Head>
+        <title> Blog | Deepak Kumar, Software Engineer @ Airneet</title>
+        <meta
+          property="og:title"
+          content="Deepak Kumar | Welcome to my second brain"
+          key="title"
+        />
+      </Head>
 
-              {/* {post.Authors.length > 0 && (
+      <div className="x-container">
+        {preview && (
+          <div className={blogStyles.previewAlertContainer}>
+            <div className={blogStyles.previewAlert}>
+              <b>Note:</b>
+              {` `}Viewing in preview mode{' '}
+              <Link href={`/api/clear-preview`}>
+                <button className={blogStyles.escapePreview}>
+                  Exit Preview
+                </button>
+              </Link>
+            </div>
+          </div>
+        )}
+        <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
+          <h1 className="page-heading"> ✍️ All Posts </h1>
+          {posts.length === 0 && (
+            <p className={blogStyles.noPosts}>There are no posts yet</p>
+          )}
+          {posts.map((post) => {
+            return (
+              <div className={blogStyles.postPreview} key={post.Slug}>
+                <h3>
+                  <span className={blogStyles.titleContainer}>
+                    {!post.Published && (
+                      <span className={blogStyles.draftBadge}>Draft</span>
+                    )}
+                    <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
+                      <a>{post.Page}</a>
+                    </Link>
+                  </span>
+                </h3>
+
+                {/* {post.Authors.length > 0 && (
                 <div className="authors">By: {post.Authors.join(' ')}</div>
               )} */}
 
-              {post.Date && (
-                <div className="posted">{getDateStr(post.Date)}</div>
-              )}
+                {post.Date && (
+                  <div className="posted">{getDateStr(post.Date)}</div>
+                )}
 
-              {/* <p>
+                {/* <p>
                 {(!post.preview || post.preview.length === 0) &&
                   'No preview available'}
                 {(post.preview || []).map((block, idx) =>
                   textBlock(block, true, `${post.Slug}${idx}`)
                 )}
               </p> */}
-            </div>
-          )
-        })}
+              </div>
+            )
+          })}
+        </div>
       </div>
     </>
   )

@@ -1,25 +1,29 @@
-import ExtLink from './ext-link'
+const socialURLs = [
+  `https://twitter.com/HQdeepak`,
+  `https://github.com/dipakkr`,
+  `https://linkedin.com/in/dipakkr`,
+]
 
-export default function Footer() {
-  return (
-    <>
-      <footer>
-        <span>Deploy your own!</span>
-        <ExtLink href="https://vercel.com/new/git/external?repository-url=https://github.com/ijjk/notion-blog/tree/main&project-name=notion-blog&repository-name=notion-blog">
-          <img
-            src="https://vercel.com/button"
-            height={46}
-            width={132}
-            alt="deploy to Vercel button"
-          />
-        </ExtLink>
-        <span>
-          or{' '}
-          <ExtLink href="https://github.com/ijjk/notion-blog">
-            view source
-          </ExtLink>
-        </span>
-      </footer>
-    </>
-  )
-}
+const Footer = () => (
+  <footer className="footer-container">
+    <div className="f-item-container">
+      <div className="footer-title">
+        <p className="about">About this place</p>
+        <p> Welcome to my digital garden </p>
+      </div>
+
+      <div className="footer-content">
+        <p className="mt-1">
+          I'm Deepak, a software engineer. On this site, I occasionally write
+          programming tutorials and lessons I learned from bootstrapping SaaS.
+          You can find me on
+          <a href="https://www.linkedin.com/in/dipakkr/">
+            Linkedin or <a href="https://twitter.com/HQdeepak"> Twitter </a>
+          </a>
+        </p>
+      </div>
+    </div>
+  </footer>
+)
+
+export default Footer

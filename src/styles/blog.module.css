@@ -1,9 +1,9 @@
 .blogIndex {
-  padding: 0 5%;
+  padding: 0 1%;
 }
 
 .blogIndex h1 {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .previewAlertContainer {
@@ -47,7 +47,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
+  color: #2a13d8;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  text-decoration: none;
 }
+
 .draftBadge {
   border-radius: 16px;
   background-color: black;
@@ -64,8 +70,7 @@
 
 .postPreview {
   max-width: 600px;
-  margin: 10px auto;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+  /* margin: 10px auto; */
 }
 
 .postPreview:last-child {
@@ -120,6 +125,10 @@
 }
 
 .postPreview :global(.posted) {
+  color: #666;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
   margin-bottom: 0.5em;
 }
 

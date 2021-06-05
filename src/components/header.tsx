@@ -4,11 +4,10 @@ import ExtLink from './ext-link'
 import { useRouter } from 'next/router'
 import styles from '../styles/header.module.css'
 
-const navItems: { label: string; page?: string; link?: string }[] = [
-  { label: 'Home', page: '/' },
-  { label: 'Blog', page: '/blog' },
-  { label: 'Contact', page: '/contact' },
-  { label: 'Source Code', link: 'https://github.com/ijjk/notion-blog' },
+const navigation = [
+  { href: '/', name: 'Home' },
+  { href: '/blog', name: 'Blog' },
+  { href: '/cheatsheets', name: 'Cheatsheets' },
 ]
 
 const ogImageUrl = 'https://notion-blog.now.sh/og-image.png'
@@ -17,35 +16,38 @@ const Header = ({ titlePre = '' }) => {
   const { pathname } = useRouter()
 
   return (
-    <header className={styles.header}>
-      <Head>
-        <title>{titlePre ? `${titlePre} |` : ''} My Notion Blog</title>
-        <meta
-          name="description"
-          content="An example Next.js site using Notion for the blog"
-        />
-        <meta name="og:title" content="My Notion Blog" />
-        <meta property="og:image" content={ogImageUrl} />
-        <meta name="twitter:site" content="@_ijjk" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={ogImageUrl} />
-      </Head>
-      <ul>
-        {navItems.map(({ label, page, link }) => (
-          <li key={label}>
-            {page ? (
-              <Link href={page}>
-                <a className={pathname === page ? 'active' : undefined}>
-                  {label}
-                </a>
-              </Link>
-            ) : (
-              <ExtLink href={link}>{label}</ExtLink>
-            )}
-          </li>
-        ))}
-      </ul>
-    </header>
+    <div className="navbar-section">
+      <div className="navbar-container w-container">
+        <div className="navigation-div">
+          <div className="nav-name-div">
+            <a href="/" className="navigation-link">
+              Deepak Kumar{' '}
+            </a>
+          </div>
+          <div className="nav-links-div">
+            <div className="nav-secondary-div no-padding-left">
+              <a
+                href="/blog"
+                aria-current="page"
+                className="navigation-link-secondary w--current"
+              >
+                Blog
+              </a>
+            </div>
+            <div className="nav-secondary-div">
+              <a href="/newsletter" className="navigation-link-secondary">
+                Newsletter
+              </a>
+            </div>
+            <div className="nav-secondary-div no-padding-right">
+              <a href="/programmatic-seo" className="navigation-link-secondary">
+                About
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 
