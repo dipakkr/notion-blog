@@ -3,7 +3,7 @@ import sharedStyles from '../styles/shared.module.css'
 import { postIsPublished } from '../lib/blog-helpers'
 import getNotionUsers from '../lib/notion/getNotionUsers'
 import getBlogIndex from '../lib/notion/getBlogIndex'
-import BlogList from '../components/Blog/bloglist'
+import BlogList from '../components/Blog/BlogList'
 import Head from 'next/head'
 
 export async function getStaticProps({ preview }) {
