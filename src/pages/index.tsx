@@ -59,10 +59,10 @@ export default function Index({ posts = [], preview }) {
             Hi, I am Deepak from 🇮🇳. I am{' '}
             <b> software engineer, open sourcer and writer</b>. I built this
             place to document my journey of learning, building new products and
-            sharing new ideas. I'm also very passionate about building a
-            business that has a great impact on society.
+            sharing new ideas. I'm passionate about building product that has a
+            great impact on society.
           </p>
-
+          {/* 
           <p>
             After completing my engineering in 2019, I started working on my
             startup,{' '}
@@ -78,21 +78,20 @@ export default function Index({ posts = [], preview }) {
             </b>{' '}
             We had product, we had community, but we were not clear about our
             business model, So we shut it down.
-          </p>
+          </p> */}
 
-          <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625607974761/-Lk6h2KN9.jpeg" />
-
+          {/* 
           <p>
             I then worked with multiple startup like
             <b> FluxAuto, 91wheels, and Airmeet(now)</b> to build software
             products. With this blog, I am trying to develop a more consistent
             habit of writing online and sharing my thought and experiments.
-          </p>
+          </p> */}
 
-          <p>
+          {/* <p>
             As naval rightly says, Learn to build & Learn to sell. And, you will
             unstoppable.
-          </p>
+          </p> */}
 
           <p>
             {' '}

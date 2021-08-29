@@ -15,8 +15,8 @@ const Footer = () => (
       <div className="footer-content">
         <p className="mt-1">
           I'm Deepak, a software engineer. On this site, I occasionally write
-          programming tutorials and lessons I learned from bootstrapping SaaS.
-          You can find me on
+          about programming tutorials, tips and tricks and my experiments with
+          life. You can find me on{' '}
           <a href="https://www.linkedin.com/in/dipakkr/">
             Linkedin or <a href="https://twitter.com/HQdeepak"> Twitter </a>
           </a>
