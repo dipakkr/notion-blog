@@ -56,8 +56,49 @@ export default function Index({ posts = [], preview }) {
           <h1>👋 Hi, I'm Deepak</h1>
 
           <p>
-            I'm a software engineer. I love building SaaS for makers and
-            developers 💚. I share my journey daily on Twitter.
+            Hi, I am Deepak from 🇮🇳. I am{' '}
+            <b> software engineer, open sourcer and writer</b>. I built this
+            place to document my journey of learning, building new products and
+            sharing new ideas. I'm also very passionate about building a
+            business that has a great impact on society.
+          </p>
+
+          <p>
+            After completing my engineering in 2019, I started working on my
+            startup,{' '}
+            <a href="https://feedingtrends.com/front-bench-startup-in-ed-tech-sector-founders-funding-future-goals-vision-mission">
+              Frontbench{' '}
+            </a>{' '}
+            - an online marketplace for mentorship, to help students get better
+            guidance. In a span of 6 months,{' '}
+            <b>
+              {' '}
+              we built a community of 10k students across 50+ campuses across
+              India.
+            </b>{' '}
+            We had product, we had community, but we were not clear about our
+            business model, So we shut it down.
+          </p>
+
+          <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1625607974761/-Lk6h2KN9.jpeg" />
+
+          <p>
+            I then worked with multiple startup like
+            <b> FluxAuto, 91wheels, and Airmeet(now)</b> to build software
+            products. With this blog, I am trying to develop a more consistent
+            habit of writing online and sharing my thought and experiments.
+          </p>
+
+          <p>
+            As naval rightly says, Learn to build & Learn to sell. And, you will
+            unstoppable.
+          </p>
+
+          <p>
+            {' '}
+            Say Hi 👋 on <a href="https://twitter.com/HQdeepak">
+              Twitter{' '}
+            </a>{' '}
           </p>
         </div>
         <BlogList posts={posts.slice(0, 5)} />
