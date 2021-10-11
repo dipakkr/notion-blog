@@ -56,11 +56,11 @@ export default function Index({ posts = [], preview }) {
           <h1>👋 Hi, I'm Deepak</h1>
 
           <p>
-            Hi, I am Deepak from 🇮🇳. I am{' '}
-            <b> software engineer, open sourcer and writer</b>. I built this
-            place to document my journey of learning, building new products and
-            sharing new ideas. I'm passionate about building product that has a
-            great impact on society.
+            Hi, I am Deepak from 🇮🇳. I am
+            <b> software engineer, make and writer</b>. I built this place to
+            document my journey of learning, building new products and sharing
+            new ideas. I'm passionate about building product that has a great
+            impact on society.
           </p>
           {/* 
           <p>

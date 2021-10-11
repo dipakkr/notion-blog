@@ -35,13 +35,10 @@ const contacts = [
 export default function Contact() {
   return (
     <>
-      <Header titlePre="Contact" />
       <div className={sharedStyles.layout}>
         <div className={contactStyles.avatar}>
           <img src="/avatar.png" alt="avatar with letters JJ" height={60} />
         </div>
-
-        <h1 style={{ marginTop: 0 }}>Contact</h1>
 
         <div className={contactStyles.name}>
           JJ Kasper - Next.js Engineer @{' '}

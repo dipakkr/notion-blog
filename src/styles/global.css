@@ -236,7 +236,7 @@ pre.dark[class*='language-'] {
 .w-container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 940px;
+  max-width: 1000px;
 }
 
 .page-heading {
@@ -308,7 +308,7 @@ h2 {
   font-weight: 300;
   font-size: 1.25rem;
   letter-spacing: -0.02rem;
-  color: var(--accents-3);
+  /* color: var(--accents-3); */
 }
 
 .video {
@@ -411,7 +411,7 @@ footer span:nth-child(3) a {
 .w-container {
   margin-left: auto;
   margin-right: auto;
-  /* max-width: 940px; */
+  max-width: 940px;
 }
 
 .nav-links-div {

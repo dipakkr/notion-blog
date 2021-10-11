@@ -40,8 +40,8 @@ const Header = ({ titlePre = '' }) => {
               </a>
             </div>
             <div className="nav-secondary-div no-padding-right">
-              <a href="/programmatic-seo" className="navigation-link-secondary">
-                About
+              <a href="/projects" className="navigation-link-secondary">
+                Projects
               </a>
             </div>
           </div>

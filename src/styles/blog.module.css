@@ -64,6 +64,41 @@
   margin-right: 6px;
 }
 
+.backButton {
+  border: 1px solid black;
+  padding: 5px;
+  max-width: 80px;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.postDetailH1 {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-family: Inter, sans-serif;
+  color: #000;
+  font-size: 40px;
+  line-height: 52px;
+  font-weight: 700;
+}
+
+.postPublishDate {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-family: Inter, sans-serif;
+  color: #666;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.postContent ul li {
+  margin-bottom: 13px;
+  font-size: medium;
+}
+
 .noPosts {
   text-align: center;
 }
@@ -135,7 +170,7 @@
 .post {
   max-width: calc(600px + 10%);
   margin: 0 auto;
-  padding: 5%;
+  padding: 1%;
 }
 
 .post :global(hr) {
