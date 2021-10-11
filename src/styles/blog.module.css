@@ -97,6 +97,7 @@
 .postContent ul li {
   margin-bottom: 13px;
   font-size: medium;
+  line-height: 1.6;
 }
 
 .noPosts {
