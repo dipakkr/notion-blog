@@ -331,6 +331,13 @@ p {
   font-size: 0.85rem;
   line-height: 1.7;
 }
+
+blockquote {
+  border-left: 3px solid currentcolor;
+  padding-left: 14px;
+  width: 100%;
+}
+
 pre {
   white-space: pre;
 }
