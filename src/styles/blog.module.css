@@ -306,6 +306,10 @@
   justify-content: center;
 }
 
+.asset-wrapper {
+  border: 1px solid grey;
+}
+
 #twitter-widget-0 {
   width: 75%;
 }

@@ -11,6 +11,7 @@ import React, { CSSProperties, useEffect } from 'react'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
 import getNotionUsers from '../../lib/notion/getNotionUsers'
 import { getBlogLink, getDateStr } from '../../lib/blog-helpers'
+import Head from 'next/head'
 
 // Get the data for each blog post
 export async function getStaticProps({ params: { slug }, preview }) {
@@ -137,6 +138,34 @@ const RenderPost = ({ post, redirect, preview }) => {
 
   return (
     <>
+      <Head>
+        <title> Blog | Deepak Kumar, Software Engineer @ Airneet</title>
+        <meta property="og:title" content={post.Page} key="title" />
+        <meta property="og:type" content="website" />
+        <meta content="summary_large_image" name="twitter:card" />
+        <meta
+          content="How you make decisions decides all the outcomes of your life."
+          name="description"
+        />
+        <meta content={post.Page} property="og:title" />
+        <meta
+          content="How you make decisions decides all the outcomes of your life."
+          property="og:description"
+        />
+        <meta
+          content="https://uploads-ssl.webflow.com/5e085291ed2a2769a872e587/60c5905d8745561ada61f3b3_How%20To%20Think%20Meta-Skill.png"
+          property="og:image"
+        />
+        <meta content={post.Page} property="twitter:title" />
+        <meta
+          content="How you make decisions decides all the outcomes of your life."
+          property="twitter:description"
+        />
+        <meta
+          content="https://uploads-ssl.webflow.com/5e085291ed2a2769a872e587/60c5905d8745561ada61f3b3_How%20To%20Think%20Meta-Skill.png"
+          property="twitter:image"
+        />
+      </Head>
       {preview && (
         <div className={blogStyles.previewAlertContainer}>
           <div className={blogStyles.previewAlert}>
