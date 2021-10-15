@@ -12,11 +12,11 @@ const Footer = () => (
       </div>
 
       <div className="footer-content">
-        <p className="mt-1">
+        <p className="footer-text mt-1">
           I'm Deepak, a software engineer, blogger and indie maker. I loved to
           write and build scalable tech product.
         </p>
-        <p>
+        <p className="footer-text">
           <a href="https://twitter.com/HQdeepak"> Twitter </a> |{' '}
           <a href="https://www.linkedin.com/in/dipakkr/">Linkedin</a>
         </p>

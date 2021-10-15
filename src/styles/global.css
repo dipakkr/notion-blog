@@ -328,7 +328,7 @@ h2 {
 p {
   color: #555;
   font-weight: 400;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   line-height: 1.7;
 }
 
@@ -540,8 +540,12 @@ footer span:nth-child(3) a {
   font-size: 1rem;
   width: 42rem;
   max-width: 100vw;
-  padding: 0 2rem;
+  padding: 0 1rem;
   margin: var(--gap-half) auto;
+}
+
+.footer-text {
+  font-size: 0.75rem;
 }
 
 .footer-title {
