@@ -34,6 +34,15 @@ const Header = ({ titlePre = '' }) => {
                 Blog
               </a>
             </div>
+            {/* <div className="nav-secondary-div no-padding-left">
+              <a
+                href="/tech"
+                aria-current="page"
+                className="navigation-link-secondary w--current"
+              >
+                Tech
+              </a>
+            </div> */}
             <div className="nav-secondary-div">
               <a href="/newsletter" className="navigation-link-secondary">
                 Newsletter

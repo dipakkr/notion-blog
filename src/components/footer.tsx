@@ -13,7 +13,7 @@ const Footer = () => (
 
       <div className="footer-content">
         <p className="footer-text mt-1">
-          I'm Deepak, a software engineer, blogger and indie maker. I loved to
+          I'm Deepak, a software engineer, blogger and indie maker. I love to
           write and build scalable tech product.
         </p>
         <p className="footer-text">
