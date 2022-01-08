@@ -195,7 +195,7 @@ const RenderPost = ({ post, redirect, preview }) => {
               listMap[id] = {
                 key: id,
                 nested: [],
-                children: textBlock(properties.title, true, id),
+                children: textBlock(properties?.title, true, id),
               }
 
               if (listMap[parent_id]) {
@@ -301,7 +301,7 @@ const RenderPost = ({ post, redirect, preview }) => {
                 break
               case 'text':
                 if (properties) {
-                  toRender.push(textBlock(properties.title, false, id))
+                  toRender.push(textBlock(properties?.title, false, id))
                 }
                 break
               case 'image':
