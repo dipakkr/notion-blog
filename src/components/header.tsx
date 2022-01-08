@@ -45,12 +45,12 @@ const Header = ({ titlePre = '' }) => {
             </div> */}
             <div className="nav-secondary-div">
               <a href="/newsletter" className="navigation-link-secondary">
-                Newsletter
+                My Stack
               </a>
             </div>
             <div className="nav-secondary-div no-padding-right">
               <a href="/projects" className="navigation-link-secondary">
-                Projects
+                About me
               </a>
             </div>
           </div>
